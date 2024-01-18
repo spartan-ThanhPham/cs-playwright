@@ -27,7 +27,7 @@ Replace <repository-url> with the actual URL of the repository.
 The branch name should include a branch type and its name
 
 - Type (prefix): feature, hotfix, bugfix, release, other
-- Name: use hyphens for word separation, be descriptive, include issue or ticket numbers, keep it short, etc. (i.e. feature/add-readme)
+- Name: use hyphens for word separation, be descriptive, include issue or ticket numbers, testcase ID, keep it short, etc. (i.e. feature/add-readme, feature/CPS118-create-and-resolve-internal-dispute)
 
 ```bash
 git checkout -b feature/branch-name
