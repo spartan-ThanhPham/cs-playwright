@@ -79,6 +79,13 @@ git pull origin main
 
 Current version: 1.41.0
 
+**Install**
+
+```bash
+npm i
+npx playwright install
+```
+
 **Run all the tests**
 
 ```bash
