@@ -10,7 +10,6 @@ Other than that, it provides you with some common used command lines to work wit
 
 ### 1. Getting Started
 
-- Have Node.js installed (”version”: “20.11.4”)
 - Have a Bitbucket account
 - Git installed
 
@@ -77,9 +76,9 @@ git pull origin main
 
 ## Playwright
 
-Current version: 1.41.0
+- Have Node.js installed (”version”: “20.11.4”) - https://nodejs.org/en
 
-**Install**
+**Install Playwright**
 
 ```bash
 npm i
