@@ -56,7 +56,7 @@ git push origin feature/branch
 
 ### 7. Creating a pull request
 
-Create a pull request (PR) on the Bitbucket web interface to merge your changes into the branch “develop” (could be updated). Provide a detailed description of your changes and any relevant information.
+Create a pull request (PR) on the Bitbucket web interface to merge your changes into the branch “main”. Provide a detailed description of your changes and any relevant information.
 
 ### 8. Resolving Conflicts
 
