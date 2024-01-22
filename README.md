@@ -1,6 +1,6 @@
 # README
 
-# **Introduction**
+## **Introduction**
 
 This README file will guide you through collaborating with our team using Bitbucket. Bitbucket is a Git-based platform that facilitates version control and collaboration among team members.
 
@@ -74,7 +74,7 @@ If others have made changes to the repository, pull those changes to your local 
 git pull origin main
 ```
 
-## Playwright
+# Playwright
 
 - Have Node.js installed (”version”: “20.11.4”) - https://nodejs.org/en
 
@@ -110,3 +110,30 @@ By default, the HTML report is opened automatically if some of the tests failed.
 ```bash
 npx playwright show-report
 ```
+
+# Naming Conventions
+
+## Selectors
+
+### 1. Web Element locator variable names
+
+`<prefix><selectorName>`
+
+| Prefix | Element Type |                Example |
+|--------|:-------------|-----------------------:|
+| btn    | Button       |               btnLogin |
+| txt    | TextBox      |            txtUsername |
+| link   | Link         |              linkAbout |
+| btn    | Button       |               btnLogin |
+| txt    | TextBox      |            txtUsername |
+| link   | Link         |              linkAbout |
+| lbl    | Label        |           lblNoteTitle |
+| img    | Image        |             imgProfile |
+| drp    | Dropdown     |              drpStatus |
+| chk    | Checkbox     |        chkPrimarySkill |
+| cbb    | ComboBox     | cbbJobSkillInterviewer |
+| icon   | Icon         |         iconInfoActive |
+| table  | Table        |         tableCampaigns |
+| row    | Row          |               rowFirst |
+| col    | Column       |            colJobTitle |
+| cell   | Cell         |        cellRequestDate |
