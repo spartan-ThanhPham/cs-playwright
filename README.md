@@ -8,6 +8,7 @@ Other than that, it provides you with some common used command lines to work wit
 
 ## Team collaboration with Bitbucket
 
+
 ### 1. Getting Started
 
 - Have a Bitbucket account
@@ -27,6 +28,7 @@ The branch name should include a branch type and its name
 
 - Type (prefix): feature, hotfix, bugfix, release, other
 - Name: use hyphens for word separation, be descriptive, include issue or ticket numbers, testcase ID, keep it short, etc. (i.e. feature/add-readme, feature/CPS118-create-and-resolve-internal-dispute)
+
 
 ```bash
 git checkout -b feature/branch-name
@@ -72,6 +74,7 @@ If others have made changes to the repository, pull those changes to your local 
 
 ```bash
 git pull origin main
+
 ```
 
 # Playwright
@@ -111,6 +114,17 @@ By default, the HTML report is opened automatically if some of the tests failed.
 npx playwright show-report
 ```
 
+# Proxy
+In case you need to access the application using proxy, please refer to the following and add it to the playwright.config.ts file
+```tsx
+launchOptions: {
+      proxy: { server: 'per-context' }
+    },
+    proxy: {
+      server: 'http://10.10.2.31:9090',
+    }
+```
+
 # Naming Conventions
 
 ## Selectors
@@ -137,3 +151,4 @@ npx playwright show-report
 | row    | Row          |               rowFirst |
 | col    | Column       |            colJobTitle |
 | cell   | Cell         |        cellRequestDate |
+| tab    | Tab          |               tabOrder |
