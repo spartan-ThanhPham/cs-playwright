@@ -32,7 +32,7 @@ export default class PepTalk {
         const chat9 = 'Can you show me experts with budget around 4000';
         const chat10 = 'I want to find an Olympian Expert in Game 2024';
         const chat11 = 'Can you tell me about Kate Richardson-Walsh OBE';
-        const chat12 = 'How about Victoria Pendleton CBE?';
+        const chat12 = 'How about Dame Inga Beale?';
         const chat13 = 'I would like to book Richardson-Walsh OBE';
         const chat14 = 'Thanh846593285@gmail.com and 846593285';
 
