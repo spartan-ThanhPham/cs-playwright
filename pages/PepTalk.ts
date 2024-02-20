@@ -1,5 +1,5 @@
-import {Page} from "playwright/test";
-import {expect} from "@playwright/test";
+import { Page } from "playwright/test";
+import { expect } from "@playwright/test";
 
 export default class PepTalk {
     page: Page;
@@ -22,19 +22,23 @@ export default class PepTalk {
     public async chatPep() {
         const chat = 'hi';
         const chat1 = 'I am looking for someone to talk about International Women s Day';
-        const chat2 = 'Online session please';
-        const chat3 = 'Max 5000';
+        const chat2 = 'in person session please';
+        const chat3 = 'Something like €1k-2k';
         const chat4 = 'Please show me additional experts';
         const chat5 = 'I am interested in expert-level information of Tamara Gillan. Can you delve deeper into the details?';
-        const chat6 = 'which session she can talk about ?';
+        const chat6 = 'which session she can talk about?';
         const chat7 = 'I am looking for a woman with a story of overcoming challenges';
-        const chat8 = 'ABCD123'
-        const chat9 = 'Can you show me experts with budget around 4000';
+        const chat8 = 'ABCD123';
+        const chat9 = 'Can you show me experts with budget with no restriction';
         const chat10 = 'I want to find an Olympian Expert in Game 2024';
         const chat11 = 'Can you tell me about Kate Richardson-Walsh OBE';
         const chat12 = 'How about Dame Inga Beale?';
         const chat13 = 'I would like to book Richardson-Walsh OBE';
         const chat14 = 'Thanh846593285@gmail.com and 846593285';
+        const chat15 = 'I would like to have meeting in lONDON';
+        const chat16 = 'Tell me alittle bit about Sophie Williams';
+        const chat17 = 'I want to hear more about her, Could you?';
+
 
         await this.txtChat().fill(chat);
         await this.page.keyboard.press('Enter');
@@ -48,13 +52,28 @@ export default class PepTalk {
         await this.txtChat().fill(chat2);
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
-        // await expect(this.lblChatMessage()).toHaveCount(4);
+        // await expect(this.lblChatMessage()).toHaveCount(15);
         await expect(this.lblMessage(chat2)).toBeVisible();
+        await this.txtChat().fill(chat15);
+        await this.page.waitForTimeout(500);
+        await this.page.keyboard.press('Enter');
+        // await expect(this.lblChatMessage()).toHaveCount(4);
+        await expect(this.lblMessage(chat15).last()).toBeVisible();
         await this.txtChat().fill(chat3);
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
-        // await expect(this.lblChatMessage()).toHaveCount(6);
+        // await expect(this.lblChatMessage()).toHaveCount(16);
         await expect(this.lblMessage(chat3).last()).toBeVisible();
+        await this.txtChat().fill(chat16);
+        await this.page.waitForTimeout(500);
+        await this.page.keyboard.press('Enter');
+        // await expect(this.lblChatMessage()).toHaveCount(17);
+        await expect(this.lblMessage(chat16).last()).toBeVisible();
+        await this.txtChat().fill(chat17);
+        await this.page.waitForTimeout(500);
+        await this.page.keyboard.press('Enter');
+        // await expect(this.lblChatMessage()).toHaveCount(6);
+        await expect(this.lblMessage(chat17).last()).toBeVisible();
         await this.txtChat().fill(chat4);
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
@@ -69,7 +88,7 @@ export default class PepTalk {
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
         // await expect(this.lblChatMessage()).toHaveCount(10);
-        await expect(this.lblMessage(chat6)).toBeVisible();
+        await expect(this.lblMessage(chat6).last()).toBeVisible();
         await this.txtChat().fill(chat7);
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
@@ -109,6 +128,6 @@ export default class PepTalk {
         await this.page.waitForTimeout(500);
         await this.page.keyboard.press('Enter');
         // await expect(this.lblChatMessage()).toHaveCount(16);
-        await expect(this.lblMessage(chat14)).toBeVisible();
+        await expect(this.lblMessage(chat14).last()).toBeVisible();
     }
 }
