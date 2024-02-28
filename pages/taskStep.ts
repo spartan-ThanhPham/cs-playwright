@@ -19,22 +19,23 @@ export default class TaskStep {
     errormesssage = () => this.page.locator("//*[contains(text(),'We couldn’t find an account matching the email and password you enter.')]");
 
     //Sucessfully Login
-    public async enterCredential() {
-        await this.txtEmail().fill('adminstrator@gmail.com');
-        await this.txtPassword().fill('123Pa$$word!');
+    public async enterCredential(email, password) {
+        await this.txtEmail().fill(email);
+        await this.txtPassword().fill(password);
         await this.btnSignin().click();
-    
-        await expect(this.linkTaskStep()).toBeVisible()
-            }
 
-  //Failed Login
-  public async loginfailed () {
+        await expect(this.linkTaskStep()).toBeVisible()
+    }
+
+    //Failed Login
+    public async loginfailed() {
         await this.txtEmail().fill('adminstrator@gmail.com');
         await this.txtPassword().fill('123Pa$$word!12');
         await this.btnSignin().click();
         await expect(this.errormesssage()).toBeVisible;
 
-        
-    }}
+
+    }
+}
 
 //expect (this.linkTaskstep()).toBeVisible();
